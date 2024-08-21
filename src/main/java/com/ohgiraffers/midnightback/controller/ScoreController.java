@@ -39,7 +39,6 @@ public class ScoreController {
         externalRequest.setText4(requestDto.getText7());
         externalRequest.setText5(result);
 
-        System.out.print(externalRequest);
 
         // 비동기 외부 API 요청 및 결과 반환
         return externalApiService.sendRequest(externalRequest)
