@@ -1,8 +1,11 @@
 package com.ohgiraffers.midnightback.dto;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ExternalApiResponseDto {
     private String text;
     private byte[] img;
+    private MultipartFile multipartFile;
 
     public ExternalApiResponseDto() {
     }
@@ -13,7 +16,10 @@ public class ExternalApiResponseDto {
     }
 
     public String getText() {
-        return text;
+        if (this.text != null) {
+            return this.text.replace("\\", ""); // '\' 문자를 제거합니다.
+        }
+        return null;
     }
 
     public void setText(String text) {

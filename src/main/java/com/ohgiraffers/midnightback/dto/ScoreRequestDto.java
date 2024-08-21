@@ -74,7 +74,16 @@ public class ScoreRequestDto {
         return text7;
     }
 
-    public void setText7(String text7) {
-        this.text7 = text7;
+    @Override
+    public String toString() {
+        return "ScoreRequestDto{" +
+                "text1='" + text1 + '\'' +
+                ", text2='" + text2 + '\'' +
+                ", text3='" + text3 + '\'' +
+                ", text4='" + text4 + '\'' +
+                ", text5='" + text5 + '\'' +
+                ", text6='" + text6 + '\'' +
+                ", text7='" + text7 + '\'' +
+                '}';
     }
 }

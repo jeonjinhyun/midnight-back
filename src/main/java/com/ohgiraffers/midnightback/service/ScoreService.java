@@ -18,12 +18,10 @@ public class ScoreService {
     public int calculateScore(ScoreRequestDto requestDto) {
         int score = 0;
         score += getScoreByText(requestDto.getText1());
-//        score += getScoreByText(requestDto.getText2());
-//        score += getScoreByText(requestDto.getText3());
+        score += getScoreByText(requestDto.getText3());
         score += getScoreByText(requestDto.getText4());
         score += getScoreByText(requestDto.getText5());
         score += getScoreByText(requestDto.getText6());
-        score += getScoreByText(requestDto.getText7());
         return score;
     }
 
@@ -34,9 +32,9 @@ public class ScoreService {
 
     public String evaluateResult(int score) {
         if (score >= 65) {
-            return "좋은";
+            return "환상적이고 행복한";
         } else {
-            return "나쁜";
+            return "섬뜩하고 끔찍한";
         }
     }
 }
